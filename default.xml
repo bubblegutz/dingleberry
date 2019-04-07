@@ -28,35 +28,21 @@
   <include name="manifests/tools.xml" />
   <include name="manifests/misc.xml" />
 
+  <project path="bionic" name="LineageOS/android_bionic" groups="pdk" />  
+  <project path="toolchain/binutils" name="toolchain/binutils" groups="pdk" remote="aosp" />
+  <repo-hooks in-project="platform/tools/repohooks" enabled-list="pre-upload" />
+  
   <!-- <project path="art" name="LineageOS/android_art" groups="pdk" /> -->
-  
-  <project path="bionic" name="LineageOS/android_bionic" groups="pdk" />
-  
   <!-- <project path="bootable/recovery" name="LineageOS/android_bootable_recovery" groups="pdk" /> -->
-  
   <!-- <project path="compatibility/cdd" name="platform/compatibility/cdd" groups="pdk" remote="aosp" /> -->
-  
   <!-- <project path="cts" name="platform/cts" groups="cts,pdk-cw-fs,pdk-fs" remote="aosp" /> -->
-  
   <!-- <project path="dalvik" name="LineageOS/android_dalvik" groups="pdk-cw-fs,pdk-fs" /> -->
-  
   <!-- <project path="development" name="LineageOS/android_development" groups="developers,pdk-cw-fs,pdk-fs" /> -->
-  
-
-
-
-
-  
-
   <!-- <project path="kernel/tests" name="kernel/tests" remote="aosp" /> -->
   <!-- <project path="libcore" name="platform/libcore" groups="pdk" remote="aosp" /> -->
   <!-- <project path="libnativehelper" name="platform/libnativehelper" groups="pdk" remote="aosp" /> -->
   <!-- <project path="pdk" name="platform/pdk" groups="pdk" remote="aosp" /> -->
   <!-- <project path="platform_testing" name="LineageOS/android_platform_testing" groups="pdk-fs,pdk-cw-fs,cts" /> -->
   <!-- <project path="sdk" name="platform/sdk" groups="pdk-cw-fs,pdk-fs" remote="aosp" /> -->
-
-  <project path="toolchain/binutils" name="toolchain/binutils" groups="pdk" remote="aosp" />
-  
-  <repo-hooks in-project="platform/tools/repohooks" enabled-list="pre-upload" />
 
 </manifest>
