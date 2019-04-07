@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote  name="github"
+           fetch=".."
+           review="review.lineageos.org" />
+
+  <remote  name="private"
+           fetch="ssh://git@github.com" />
+
+  <remote  name="aosp"
+           fetch="https://android.googlesource.com"
+           review="android-review.googlesource.com"
+           revision="refs/tags/android-8.1.0_r52" />
+
+  <default revision="refs/heads/lineage-15.1"
+           remote="github"
+           sync-c="true"
+           sync-j="2" />
+
+  <include name="manifests/build.xml" />
+  <include name="manifests/device.xml" />
+  <include name="manifests/external.xml" />
+  <include name="manifests/frameworks.xml" />
+  <include name="manifests/hardware.xml" />
+  <include name="manifests/prebuilts.xml" />
+  <include name="manifests/test.xml" />
+  <include name="manifests/tools.xml" />
+  <include name="manifests/misc.xml" />
+
+  <!-- <project path="art" name="LineageOS/android_art" groups="pdk" /> -->
+  
+  <project path="bionic" name="LineageOS/android_bionic" groups="pdk" />
+  
+  <!-- <project path="bootable/recovery" name="LineageOS/android_bootable_recovery" groups="pdk" /> -->
+  
+  <!-- <project path="compatibility/cdd" name="platform/compatibility/cdd" groups="pdk" remote="aosp" /> -->
+  
+  <!-- <project path="cts" name="platform/cts" groups="cts,pdk-cw-fs,pdk-fs" remote="aosp" /> -->
+  
+  <!-- <project path="dalvik" name="LineageOS/android_dalvik" groups="pdk-cw-fs,pdk-fs" /> -->
+  
+  <!-- <project path="development" name="LineageOS/android_development" groups="developers,pdk-cw-fs,pdk-fs" /> -->
+  
+
+
+
+
+  
+
+  <!-- <project path="kernel/tests" name="kernel/tests" remote="aosp" /> -->
+  <!-- <project path="libcore" name="platform/libcore" groups="pdk" remote="aosp" /> -->
+  <!-- <project path="libnativehelper" name="platform/libnativehelper" groups="pdk" remote="aosp" /> -->
+  <!-- <project path="pdk" name="platform/pdk" groups="pdk" remote="aosp" /> -->
+  <!-- <project path="platform_testing" name="LineageOS/android_platform_testing" groups="pdk-fs,pdk-cw-fs,cts" /> -->
+  <!-- <project path="sdk" name="platform/sdk" groups="pdk-cw-fs,pdk-fs" remote="aosp" /> -->
+
+  <project path="toolchain/binutils" name="toolchain/binutils" groups="pdk" remote="aosp" />
+  
+  <repo-hooks in-project="platform/tools/repohooks" enabled-list="pre-upload" />
+
+</manifest>
